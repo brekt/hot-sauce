@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button';
+import actions from '../state/actions';
 
-function Heat(props) {
+function Heat({ heatIndex, dispatch }) {
 
-    let [heatIndex, setHeatIndex] = useState(60);
-
-    function handleClick(adjustment) {
-        let newHeatIndex = heatIndex + adjustment;
-        if (newHeatIndex < 0) {
-            newHeatIndex = 0
-        } else if (newHeatIndex > 120) {
-            newHeatIndex = 120;
-        }
-        setHeatIndex(newHeatIndex);
+    function handleClick(type) {
+        dispatch(type);
     }
 
     return(
@@ -29,12 +22,12 @@ function Heat(props) {
                 <Button
                     text='MILDER'
                     color='hsl(120, 100%, 50%)'
-                    handleClick={() => { handleClick(10); }}
+                    handleClick={() => handleClick({ type: actions.DECREASE_HEAT })}
                 />
                 <Button
                     text='HOTTER'
                     color='hsl(0, 100%, 50%)'
-                    handleClick={() => { handleClick(-10); }}
+                    handleClick={() => handleClick({ type: actions.INCREASE_HEAT })}
                 />
             </div>
         </div>

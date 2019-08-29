@@ -1,0 +1,4 @@
+export default {
+    DECREASE_HEAT: 'DECREASE_HEAT',
+    INCREASE_HEAT: 'INCREASE_HEAT'
+};
