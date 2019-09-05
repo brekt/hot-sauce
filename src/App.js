@@ -12,7 +12,9 @@ function App() {
     return (
         <div className="App">
             <h1>Hot Sauce</h1>
-            <Bottle />
+            <Bottle
+                heatIndex={state.heatIndex}
+            />
             <Heat
                 heatIndex={state.heatIndex}
                 dispatch={dispatch}

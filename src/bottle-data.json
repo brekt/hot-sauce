@@ -1,0 +1,16 @@
+{
+    "bottles": [
+        {
+            "name": "La Victoria",
+            "price": "$4.38"
+        },
+        {
+            "name": "Moe Mountain",
+            "price": "$6.73"
+        },
+        {
+            "name": "Outdoor Secrets Unwrapped Ghost Pepper",
+            "price": "$7.46"
+        }
+    ]
+}
